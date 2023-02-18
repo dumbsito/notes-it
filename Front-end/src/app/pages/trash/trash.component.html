@@ -1,0 +1,30 @@
+<app-dashboard></app-dashboard>
+
+<div class="trash">
+
+    <div class="d-flex navv">
+    <div class="titulo ">
+        <h1>Trash </h1>
+        <span class="numero">{{servi.trash.length}}</span>
+    </div>
+
+    <button class="btn delete btn-primary " (click)="deleteAll()">Delete all</button>
+</div>
+    <div class="mt-4">
+<app-card [resultadoHijo]="servi.trash"></app-card>
+</div>
+
+   <div class="tra" *ngIf="showTrash">
+        <img src="/assets/trash.svg" alt="">
+        <h3>Trash is empty</h3>
+
+        <button [routerLink]="['/create']" class="mt-2 btn btn-primary">Create new</button>
+    </div>
+
+
+   
+    
+	
+
+
+</div>

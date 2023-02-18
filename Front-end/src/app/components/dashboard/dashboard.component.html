@@ -1,0 +1,103 @@
+<div>
+
+
+    <div  [ngClass]="servi.despliegue ?'dashed':'dash'">
+
+        <div class="title d-flex ">
+            <img src="/assets/sygnet.0cffb16292ca0d8f1d89bb05c11a4408.svg"  > 
+            <button [ngClass]="{'arrow':!servi.despliegue,'arrowb':servi.despliegue}"
+             (click)="desplegar()" class="fa-xl mx-5"><i class="fa-solid arrow fa-arrow-right" [ngClass]="{'fa-arrow-right':!servi.despliegue,'fa-arrow-left':servi.despliegue}"></i></button>
+        </div>
+
+
+        <ul>
+            <li class="list" 
+                 [routerLink]="['/create']" routerLinkActive="active"
+            ><i class="fa-solid fa-plus pe-4" ></i><span *ngIf="servi.despliegue">Create new</span>
+   
+        </li>
+            <li class="list" 
+                 [routerLink]="['/notes']" routerLinkActive="active"
+            ><i class="fa-sharp fa-solid fa-bars pe-4"></i><span *ngIf="servi.despliegue">Notes</span>
+            <div class="iconos">
+                <span class=" notifications">{{servi.notes.length}}</span>
+               <!--<span class="hiddenTitle">Notes</span>--> 
+            </div>
+        </li>
+            <li class="list" 
+            [routerLink]="['/trash']" routerLinkActive="active"
+            ><i class="fa-regular fa-trash-can pe-4"></i><span *ngIf="servi.despliegue">Trash</span>
+            <div class="iconos">
+                <span class=" notifications">{{servi.trash.length}}</span>
+               <!--<span class="hiddenTitle">Notes</span>--> 
+            </div>
+        </li>
+            <li class="list" 
+            [routerLink]="['/favourite']" routerLinkActive="active"
+            ><i class="fa-regular fa-heart pe-4"></i><span *ngIf="servi.despliegue">Favourite</span>
+            <div class="iconos">
+                <span class=" notifications">{{servi.favourites.length}}</span>
+               <!--<span class="hiddenTitle">Notes</span>--> 
+            </div>
+        </li>
+            <li class="list" *ngIf="!servi.logged"
+            [routerLink]="['/login']" routerLinkActive="active"
+            > <i class="fa-solid fa-user-group pe-4"></i><span *ngIf="servi.despliegue">Login</span>
+            <div class="iconos">
+                <span class=" notifications">Login!</span>
+               <!--<span class="hiddenTitle">Notes</span>--> 
+            </div>
+        </li>   
+            <li class="list" *ngIf="servi.logged"
+            [routerLink]="['/account']" routerLinkActive="active"
+            > <i class="fa-solid fa-user pe-4"></i><span *ngIf="servi.despliegue">Account</span></li>
+           
+            <li class="list" *ngIf="servi.logged"
+                (click)="logOut()"      routerLinkActive="active"
+            > <i class="fa-solid fa-right-from-bracket pe-4"></i><span *ngIf="servi.despliegue">Log out</span></li>
+        </ul>
+
+     
+        
+
+    
+    </div>
+
+
+
+
+        <!-- 
+        <div class="title d-flex">
+            <img src="/assets/sygnet.0cffb16292ca0d8f1d89bb05c11a4408.svg">
+            <h4 class="mt-2 mx-2">Notes App</h4>
+        </div>
+        <ul>
+            <li (click)="clickCreate()" [ngClass]="{'active':status}" 
+                 [routerLink]="['/create']"
+            ><i class="fa-solid fa-plus pe-4" ></i>Create new</li>
+            <li (click)="clickNotes()" [ngClass]="{'active':status}"
+                 [routerLink]="['/notes']"
+            ><i class="fa-sharp fa-solid fa-bars pe-4"></i>Notes</li>
+            <li (click)="clickTrash()" [ngClass]="{'active':status2}"
+            [routerLink]="['/trash']"
+            ><i class="fa-regular fa-trash-can pe-4"></i>Trash</li>
+            <li (click)="clickFavourite()" [ngClass]="{'active':status3}"
+            [routerLink]="['/favourite']"
+            ><i class="fa-regular fa-heart pe-4"></i>Favourite</li>
+            <li (click)="clickLogin()" [ngClass]="{'active':status}"
+            [routerLink]="['/login']"
+            > <i class="fa-solid fa-user-group pe-4"></i>Login</li>
+        </ul>
+
+       <li (click)="clickNotes()" [ngClass]="{'active':status}"><i class="fa-light fa-users pe-4"></i>Users</li>
+        <li (click)="clickNotes()" [ngClass]="{'active':status}"> <i class="fa-solid fa-user-group pe-4"></i>Friends</li>
+        <li (click)="clickNotes()" [ngClass]="{'active':status}"> <i class="fa-solid fa-right-from-bracket pe-4"></i>Logout</li>
+        <li (click)="clickAccount()" [ngClass]="{'active':status}"><i class="fa-regular fa-user pe-4"></i>Account</li>
+        
+        <button (click)="desplegar()" class="arrowb"><i class="fa-solid arrow fa-arrow-right"></i></button>
+
+    
+    </div>-->
+    
+
+</div>

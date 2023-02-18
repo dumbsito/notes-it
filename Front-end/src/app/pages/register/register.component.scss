@@ -1,0 +1,64 @@
+.login{
+    margin-left: 80px;
+
+padding-left: 50px;   
+
+}
+h1{
+    padding-top: 80px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    max-width: 40em;
+    width: 35em;
+   
+}
+
+input,select,option{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#0d1016;
+    outline: none;
+    border: 1px solid #202531;
+}
+
+img{
+    width: 30rem;
+    height: 30rem;
+    margin-left:6rem;
+    margin-top: 6rem;
+}
+
+.register{
+    display: flex;
+    
+    input{
+      width: 16.9rem;
+    }
+
+    .surname{
+        margin-left: 20px;
+    }
+}
+
+.invalid{
+    margin-left: 5px;
+        margin-top:-4px;
+        margin-bottom:9px;
+display: flex;
+span{
+    color: #1976d2;
+    display: flex;
+    margin-left: 5px; 
+    margin-top: -1px;
+    font-size: 14px;
+}
+    svg{
+            width: 20px;
+    }
+}
+

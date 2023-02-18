@@ -1,0 +1,18 @@
+<app-dashboard></app-dashboard>
+<div class="favourite">
+    
+    <div class="titulo">
+        <h1>Favourites </h1>
+        <span class="numero">{{servi.favourites.length}}</span>
+    </div>
+
+<div class="mt-4">
+<app-card [resultadoHijo]="servi.favourites"></app-card>
+</div>
+
+<div class="fav" *ngIf="showFavourite">
+    <img src="/assets/favourite.svg">
+    <h3>Favourites is empty</h3>
+    <button [routerLink]="['/create']" class="mt-2 btn btn-primary">Create new</button>
+</div>
+</div>

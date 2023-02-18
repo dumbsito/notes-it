@@ -1,0 +1,91 @@
+.notes{
+    margin-left: 80px;
+  
+}
+
+img{
+    width: 18rem;
+    height: 16rem;
+}
+
+.notas{
+   
+    text-align: center;
+
+    h3{
+      margin-top: 20px;
+    }
+
+    span{
+      font-size: 20px;
+      background-color:#202531;
+      padding :4px 9px 4px 9px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+}
+
+input,textarea,select,option,.carouselview{
+  margin-bottom: 15px;
+ 
+  padding: 10px;
+  border-radius: 10px;
+  background-color:#0d1016;
+  outline: none;
+  border: 1px solid #202531;
+}
+
+.fa-solid{
+position: relative;
+ right: 30px;
+ cursor: pointer;
+}
+label{
+  color: #6f737c;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-bottom: 5px
+}
+
+svg{
+  width: 50px;
+  margin-left: 20px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 130px;
+  padding-left: 50px;
+
+  h1{
+border-left: 1px solid skyblue;
+padding-left: 20px;
+  }
+}
+.searchNotes{
+  margin-right: 50px;
+  
+
+  
+}
+.cardcontainer{
+
+
+width: 92vw;
+}
+
+.numero{
+ width: 1.8rem;
+ height: 1.8rem;
+ text-align: center;
+ font-weight:700;
+ font-size: 20px;
+  margin-left: 15px;
+  background-color: rgb(22, 144, 245);
+margin-top: 13px;
+ border-radius: 100%;
+}
+
+
+
