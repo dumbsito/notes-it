@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 });
 
 let corsOptions = {
-  origin: ["http://localhost:49875/"],
+  origin: ["https://notes-it-inky.vercel.app/"],
   credentials: true,
 };
 
