@@ -1,71 +1,171 @@
 <app-dashboard></app-dashboard>
 <div class="login d-flex">
   <div>
-
     <div class="addcontainer">
-    <div class="success" [hidden]="!servi.showAdded" id="viewportPendulum">
+      <div class="success" [hidden]="!servi.showAdded" id="viewportPendulum">
         <div role="alert" class="d-flex">
-                  <svg viewBox="0 0 24 24" width="100%" height="100%" fill="currentColor"><path d="M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"></path>
-                      </svg>
-        <p>Your successfully registered</p>
+          <svg
+            viewBox="0 0 24 24"
+            width="100%"
+            height="100%"
+            fill="currentColor"
+          >
+            <path
+              d="M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"
+            ></path>
+          </svg>
+          <p>Your successfully registered</p>
         </div>
-        <div role="progressbar" aria-hidden="false" aria-label="notification timer" class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--colored Toastify__progress-bar--success" style="animation-duration: 1000ms; animation-play-state: paused; opacity: 1;">
+        <div
+          role="progressbar"
+          aria-hidden="false"
+          aria-label="notification timer"
+          class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--colored Toastify__progress-bar--success"
+          style="
+            animation-duration: 1000ms;
+            animation-play-state: paused;
+            opacity: 1;
+          "
+        ></div>
+      </div>
+
+      <div class="success" [hidden]="!servi.showLogout" id="viewportPendulum">
+        <div role="alert" class="d-flex">
+          <svg
+            viewBox="0 0 24 24"
+            width="100%"
+            height="100%"
+            fill="currentColor"
+          >
+            <path
+              d="M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"
+            ></path>
+          </svg>
+          <p>You have been logout!</p>
         </div>
+        <div
+          role="progressbar"
+          aria-hidden="false"
+          aria-label="notification timer"
+          class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--colored Toastify__progress-bar--success"
+          style="
+            animation-duration: 1000ms;
+            animation-play-state: paused;
+            opacity: 1;
+          "
+        ></div>
+      </div>
+
+      <div class="error" [hidden]="!servi.incorrectPass" id="viewportPendulum">
+        <div role="alert" class="d-flex">
+          <svg
+            viewBox="0 0 24 24"
+            width="100%"
+            height="100%"
+            fill="currentColor"
+          >
+            <path
+              d="M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"
+            ></path>
+          </svg>
+          <p>Password or email incorrect!</p>
         </div>
+        <div
+          role="progressbar"
+          aria-hidden="false"
+          aria-label="notification timer"
+          class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--colored Toastify__progress-bar--success"
+          style="
+            animation-duration: 1000ms;
+            animation-play-state: paused;
+            opacity: 1;
+          "
+        ></div>
+      </div>
 
-        <div class="success" [hidden]="!servi.showLogout" id="viewportPendulum">
-            <div role="alert" class="d-flex">
-                      <svg viewBox="0 0 24 24" width="100%" height="100%" fill="currentColor"><path d="M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"></path>
-                          </svg>
-            <p>You have been logout!</p>
-            </div>
-            <div role="progressbar" aria-hidden="false" aria-label="notification timer" class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--colored Toastify__progress-bar--success" style="animation-duration: 1000ms; animation-play-state: paused; opacity: 1;">
-            </div>
-            </div>
-
-        <div class="error" [hidden]="!servi.incorrectPass" id="viewportPendulum">
-            <div role="alert" class="d-flex">
-                      <svg viewBox="0 0 24 24" width="100%" height="100%" fill="currentColor"><path d="M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"></path>
-                          </svg>
-            <p>Password or email incorrect!</p>
-            </div>
-            <div role="progressbar" aria-hidden="false" aria-label="notification timer" class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--colored Toastify__progress-bar--success" style="animation-duration: 1000ms; animation-play-state: paused; opacity: 1;">
-            </div>
-            </div>
-
-            <div class="error" [hidden]="!servi.notExists" id="viewportPendulum">
-                <div role="alert" class="d-flex">
-                          <svg viewBox="0 0 24 24" width="100%" height="100%" fill="currentColor"><path d="M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"></path>
-                              </svg>
-                <p>Email doesn't exists!</p>
-                </div>
-                <div role="progressbar" aria-hidden="false" aria-label="notification timer" class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--colored Toastify__progress-bar--success" style="animation-duration: 1000ms; animation-play-state: paused; opacity: 1;">
-                </div>
-                </div>
-
+      <div class="error" [hidden]="!servi.notExists" id="viewportPendulum">
+        <div role="alert" class="d-flex">
+          <svg
+            viewBox="0 0 24 24"
+            width="100%"
+            height="100%"
+            fill="currentColor"
+          >
+            <path
+              d="M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"
+            ></path>
+          </svg>
+          <p>Email doesn't exists!</p>
+        </div>
+        <div
+          role="progressbar"
+          aria-hidden="false"
+          aria-label="notification timer"
+          class="Toastify__progress-bar Toastify__progress-bar--animated Toastify__progress-bar-theme--colored Toastify__progress-bar--success"
+          style="
+            animation-duration: 1000ms;
+            animation-play-state: paused;
+            opacity: 1;
+          "
+        ></div>
+      </div>
     </div>
     <h1>Login to your account!</h1>
 
-    <form action="" class="" (ngSubmit)="submit()">
-        <label>Email</label>
-        <input type="email" placeholder="Your email" [(ngModel)]="email" name="email">
-        <div *ngIf="email.length<6 && email.length>0"  class="invalid mx-2 "><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ErrorOutlineIcon"><path
-            fill="#1976d2" 
-            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
-            <span>Email is required</span>  
-        </div>  
-        <label for="">Password</label>
-        <input type="password" placeholder="Your password"  [(ngModel)]="password" name="pass">
-        <div *ngIf="password.length<8 && password.length>0"  class="invalid mx-2 "><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ErrorOutlineIcon"><path
-            fill="#1976d2" 
-            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg>
-            <span>Password is required. Min 8 letters</span>  
-        </div> 
-        <a class="enlace" (click)="toRegister()">You don't have an account? Register</a>
+    <form action="" class="" (ngSubmit)="onSubmit()">
+      <label>Email</label>
+      <input
+        type="email"
+        placeholder="Your email"
+        [(ngModel)]="email"
+        name="email"
+      />
+      <div *ngIf="email.length < 6 && email.length > 0" class="invalid mx-2">
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+          focusable="false"
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          data-testid="ErrorOutlineIcon"
+        >
+          <path
+            fill="#1976d2"
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          ></path>
+        </svg>
+        <span>Email is required</span>
+      </div>
+      <label for="">Password</label>
+      <input
+        type="password"
+        placeholder="Your password"
+        [(ngModel)]="password"
+        name="pass"
+      />
+      <div
+        *ngIf="password.length < 8 && password.length > 0"
+        class="invalid mx-2"
+      >
+        <svg
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+          focusable="false"
+          aria-hidden="true"
+          viewBox="0 0 24 24"
+          data-testid="ErrorOutlineIcon"
+        >
+          <path
+            fill="#1976d2"
+            d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+          ></path>
+        </svg>
+        <span>Password is required. Min 8 letters</span>
+      </div>
+      <a class="enlace" (click)="toRegister()"
+        >You don't have an account? Register</a
+      >
 
-        <button class="btn btn-primary mt-4" type="submit">Log in</button>
+      <button class="btn btn-primary mt-4" type="submit">Log in</button>
     </form>
+  </div>
+  <img src="/assets/loginnotes.svg" alt="" />
 </div>
-    <img src="/assets/loginnotes.svg" alt="">
-</div>
-

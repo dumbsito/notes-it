@@ -1,0 +1,58 @@
+.cardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-left: 45px;
+}
+
+.cardo {
+  background-color: #0d1016;
+  border: 1px solid #202531;
+  width: 35rem;
+  height: 17rem;
+  border-radius: 10px;
+}
+.cardo h2 {
+  border-left: 1px solid #202531;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-top: 8px;
+  font-size: 23px;
+}
+.cardo .guest {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.cardo .shopping {
+  border: 1px solid #202531;
+  margin: 0px 15px;
+  border-radius: 10px;
+  height: 90px;
+  padding: 10px;
+}
+.cardo .shopping h3 {
+  font-size: 17px;
+  color: #6f737c;
+}
+.cardo .shopping p {
+  font-size: 21px;
+}
+.cardo .btns {
+  margin-top: 1.5rem;
+  margin-left: 1.3rem;
+}
+
+svg {
+  width: 50px;
+  margin-left: 20px;
+}
+
+button {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #0d1016;
+  border: 1px solid #202531;
+}/*# sourceMappingURL=card.component.css.map */

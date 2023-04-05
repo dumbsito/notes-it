@@ -7,21 +7,51 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-password:string="";
-email:string="";
+  password: string = '';
+  email: string = '';
 
-  constructor(public servi:Service,private router:Router,public http:HttpClient){
-    environment.url
+  constructor(
+    public servi: Service,
+    private router: Router,
+    public http: HttpClient
+  ) {
+    environment.url;
   }
   ngOnInit(): void {
-   console.log(environment.url);
-
+    console.log(environment.url);
   }
-//  lean22@gmailcom Leanriver12
-  submit(){
+  //  lean22@gmailcom Leanriver12
+
+  onSubmit() {
+    this.servi.login(this.email, this.password).subscribe(
+      (response) => {
+        console.log(response.token);
+        this.servi.logged = true;
+        this.servi.showLogout = true;
+        setTimeout(() => {
+          this.servi.showLogout = false;
+        }, 3000);
+        this.router.navigate(['/create']);
+        // Aquí puedes guardar el token en el almacenamiento local o en una cookie
+      },
+      (error) => {
+        console.error(error);
+        this.servi.incorrectPass = true;
+        setTimeout(() => {
+          this.servi.incorrectPass = false;
+        }, 3000);
+      }
+    );
+  }
+
+  toRegister() {
+    this.router.navigate(['/register']);
+  }
+}
+/*submit(){
 
     let params= {
       email:this.email,
@@ -63,34 +93,19 @@ email:string="";
           setTimeout(() => {
              this.servi.incorrectPass=false      
           }, 3000)
-        })*/  
-       
-     /*       console.log(data)
+        })*/
+
+/*       console.log(data)
           console.log("email no existe");
          this.servi.notExists=true;
          setTimeout(() => {
             this.servi.notExists=false   
          }, 3000);*/
-        
-        
-      
-       
-        
-  
- 
-  }
- /*   this.http.post(`https://dead-hare-frock.cyclic.app/login`, params).subscribe((data:any)=>{
+
+/*   this.http.post(`https://dead-hare-frock.cyclic.app/login`, params).subscribe((data:any)=>{
 
      
   }
   
     
 })*/
-
-
-
-  toRegister(){
-    this.router.navigate(["/register"])
-
-  }
-}

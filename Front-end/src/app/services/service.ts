@@ -3,43 +3,36 @@ import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class Service {
-despliegue:boolean=false
-showAdded:boolean=false;
-incorrectPass:boolean=false;
-notExists:boolean=false;
-logged:boolean=false;
-showLogout:boolean=false;
-notes:any[]=[]
-trash:any[]=[]
-favourites:any[]=[]
+  despliegue: boolean = false;
+  showAdded: boolean = false;
+  incorrectPass: boolean = false;
+  notExists: boolean = false;
+  logged: boolean = false;
+  showLogout: boolean = false;
+  notes: any[] = [];
+  trash: any[] = [];
+  favourites: any[] = [];
 
-name:string="";
-surname:string="";
-email:string="";
-password:string="";
-  constructor(public http:HttpClient) { }
+  name: string = '';
+  surname: string = '';
+  email: string = '';
+  password: string = '';
+  constructor(public http: HttpClient) {}
 
-  token:string="";
-  serverUrl:string="http://localhost:3000";
+  token: string = '';
+  private baseUrl = 'http://localhost:4000';
 
-
-  registerUser(user: any): Observable<any> {
-    const headers = new HttpHeaders({
-      'Content-Type':  'application/json',
-    });
-    return this.http.post("https://backnotes.onrender.com/users/register", user, {headers: headers});
+  register(email: string, password: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/register`, { email, password });
   }
 
-  authenticateUser(loginData:any): Observable<any> {
-    const headers = new HttpHeaders({
-      'Content-Type':  'application/json'
-    });
-    return this.http.post("https://backnotes.onrender.com/users/authenticate", loginData, {headers: headers});
+  login(email: string, password: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/login`, { email, password });
   }
-
+  /*
   register(params:any){
     return this.http.post(`${this.serverUrl}/register`,params)
   }
@@ -55,7 +48,6 @@ password:string="";
         }
 
         return user;
-      }))*/
-  }
-
+      }))
+  }*/
 }

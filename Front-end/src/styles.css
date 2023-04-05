@@ -1,1 +1,128 @@
-/* You can add global styles to this file, and also import other style files *//*# sourceMappingURL=styles.css.map */
+/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #0B0E13;
+}
+
+.enlace {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0B1DC1;
+}
+
+/*
+.Toastify__progress-bar--animated {
+  -webkit-animation: Toastify__trackProgress linear 1 forwards;
+  animation: Toastify__trackProgress linear 1 forwards;
+}
+.Toastify__progress-bar{
+  bottom: 0;
+  height: 5px;
+  left: 0;
+  opacity: .7;
+  position: absolute;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  width: 100%;
+}
+.Toastify__toast-body {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  margin: auto 0;
+  padding: 6px;
+}
+.Toastify__close-button {
+  align-self: flex-start;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: .7;
+  outline: none;
+  padding: 0;
+  transition: .3s ease;
+}*/
+.addcontainer {
+  position: absolute;
+  width: 92vw;
+}
+
+.success {
+  background-color: #07bc0c;
+  color: white;
+  cursor: pointer;
+  height: 4rem;
+  width: 20rem;
+  border-radius: 4px;
+  display: flex;
+  font-family: sans-serif;
+  margin: 30px 10px 0px auto;
+  padding: 8px;
+}
+.success .progress {
+  background-color: white;
+}
+.success svg {
+  width: 30px;
+  margin-left: 35px;
+  margin-top: -5px;
+}
+.success p {
+  margin-top: 6px;
+  margin-left: 10px;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.error {
+  background-color: red;
+  font-weight: 400;
+  color: white;
+  cursor: pointer;
+  height: 4rem;
+  width: 20rem;
+  border-radius: 8px;
+  display: flex;
+  font-family: Roboto, sans-serif;
+  margin: 30px 10px 30px auto;
+  padding: 8px;
+}
+.error .progress {
+  background-color: white;
+}
+.error svg {
+  width: 30px;
+  margin-left: 35px;
+  margin-top: -5px;
+}
+.error p {
+  margin-top: 4px;
+  margin-left: 10px;
+  width: 100%;
+  font-size: 20px;
+}
+
+#viewportPendulum {
+  animation: 3s swingViewport forwards;
+}
+
+@keyframes swingViewport {
+  0% {
+    transform: translateX(200px);
+  }
+  50% {
+    transform: translateX(-60px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+}/*# sourceMappingURL=styles.css.map */

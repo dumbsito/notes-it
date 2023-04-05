@@ -9,21 +9,21 @@ import { Service } from '../../services/service';
 })
 export class DashboardComponent {
 
-constructor(private router:Router,public servi:Service){
+constructor(private router:Router,public service:Service){
 
 }
 
   status:boolean=false
 desplegar(){
-  this.servi.despliegue=!this.servi.despliegue
+  this.service.despliegue=!this.service.despliegue
   }
 
 
   logOut(){
-    this.servi.logged=false
-    this.servi.showLogout=true
+    this.service.logged=false
+    this.service.showLogout=true
     setTimeout(() => {
-       this.servi.showLogout=false
+       this.service.showLogout=false
        
     }, 3000);
     this.router.navigate(["/login"])
