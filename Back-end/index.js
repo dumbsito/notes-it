@@ -17,7 +17,6 @@ app.use((req, res, next) => {
     "Access-Control-Allow-Methods",
     "GET, POST, PATCH, PUT, DELETE, OPTIONS"
   );
-  console.log("Middleware");
   next();
 });
 
@@ -44,6 +43,9 @@ const User = mongoose.model("User", userSchema);
 
 app.use(express.json());
 
+app.get("/prueba", async (req, res) => {
+  res.send("esto es una prueba");
+});
 app.post("/register", async (req, res) => {
   try {
     const { email, password } = req.body;
